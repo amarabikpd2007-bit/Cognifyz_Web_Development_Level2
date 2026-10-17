@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Card - Cognifyz</title>
+
+    <!-- Bulma CSS Framework -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <style>
+        body {
+            background-color: #f0f4ff;
+            min-height: 100vh;
+            padding: 40px 15px;
+        }
+
+        .card {
+            max-width: 380px;
+            margin: auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            text-align: center;
+        }
+
+        .title {
+            color: #253b80;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title has-text-centered mb-6">
+                Welcome to Cognifyz Technologies
+            </h1>
+
+            <div class="columns is-centered">
+
+                <div class="column is-5">
+
+                    <div class="card">
+
+                        <div class="card-image">
+                            <figure class="image">
+                                <img
+                                src="https://picsum.photos/600/400"
+                                alt="Web Development">
+                            </figure>
+                        </div>
+
+                        <div class="card-content">
+
+                            <p class="title is-4">
+                                Web Development
+                            </p>
+
+                            <p class="subtitle is-6">
+                                Learn and Build
+                            </p>
+
+                            <div class="content">
+                                Web development helps us create
+                                modern and responsive websites
+                                using HTML, CSS and JavaScript.
+                            </div>
+
+                            <button class="button is-link">
+                                Learn More
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

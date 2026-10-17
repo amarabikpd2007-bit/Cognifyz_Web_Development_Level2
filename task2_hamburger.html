@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hamburger Menu - Cognifyz</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+        }
+
+        header {
+            background-color: #253b80;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav-links a:hover {
+            color: #facc15;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .content {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content h1 {
+            color: #253b80;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Mobile Responsive Menu */
+
+        @media screen and (max-width: 768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #4f46e5;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 25px;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Cognifyz
+            </div>
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Services</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="content">
+
+        <h1>Welcome to Cognifyz Technologies</h1>
+
+        <p>
+            Responsive Hamburger Navigation Menu
+        </p>
+
+        <p>
+            Explore our website using the navigation menu.
+        </p>
+
+    </div>
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+            const isExpanded =
+                navLinks.classList.contains("active");
+
+            menuToggle.setAttribute("aria-expanded", isExpanded);
+
+            menuToggle.innerHTML = isExpanded ? "✕" : "☰";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

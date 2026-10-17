@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Webpage - Cognifyz</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+        }
+
+        header {
+            background-color: #253b80;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #4f46e5;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 17px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            flex: 1;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .box h2 {
+            color: #253b80;
+        }
+
+        footer {
+            background-color: #253b80;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Tablet and mobile responsive design */
+        @media screen and (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+
+        /* Small mobile screens */
+        @media screen and (max-width: 480px) {
+
+            header {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 21px;
+            }
+
+            nav a {
+                display: block;
+                margin: 12px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            .box {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Responsive Website</h1>
+        <p>Welcome to Cognifyz Technologies</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>HTML</h2>
+            <p>HTML creates the structure of webpages.</p>
+        </div>
+
+        <div class="box">
+            <h2>CSS</h2>
+            <p>CSS makes webpages beautiful and attractive.</p>
+        </div>
+
+        <div class="box">
+            <h2>JavaScript</h2>
+            <p>JavaScript adds interactive features.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Cognifyz Technologies</p>
+    </footer>
+
+</body>
+</html>
